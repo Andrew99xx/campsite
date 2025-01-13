@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "analyze": "ANALYZE=true next build",
-    "build": "next build",
-    "build-storybook": "storybook build",
+    "build": "node init && next build",
+    "build-storybook": "node init && storybook build",
     "clean": "rm -rf .next .turbo .vercel node_modules",
-    "dev": "next dev -p 3000",
+    "dev": "node init && next dev -p 3000",
     "lint": "next lint",
     "playwright": "playwright test",
-    "start": "next start",
+    "start": "node init && next start",
     "storybook": "storybook dev -p 6006",
     "test": "vitest"
   },

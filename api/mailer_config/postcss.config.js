@@ -11,4 +11,4 @@ module.exports = ({ env }) => ({
       postcssInsertData: ['app/assets/stylesheets/mailer.css']
     }
   }
-})
+});

@@ -3,13 +3,13 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "pnpm build:css && pnpm build:js",
-    "build:css": "tailwind -i ./src/styles/global.css -o ./build/global.css",
-    "build:js": "build-figma-plugin --typecheck --minify",
+    "build": "node init && pnpm build:css && pnpm build:js",
+    "build:css": "node init && tailwind -i ./src/styles/global.css -o ./build/global.css",
+    "build:js": "node init && build-figma-plugin --typecheck --minify",
     "clean": "rm -rf .turbo build node_modules manifest.json",
-    "dev": "pnpm build:css && build-figma-plugin --typecheck && concurrently pnpm:dev:css pnpm:dev:js",
-    "dev:css": "tailwind -i ./src/styles/global.css -o ./build/global.css --watch",
-    "dev:js": "onchange 'build/global.css' 'src/**/*' '../../packages/ui/**/*' -- build-figma-plugin --typecheck"
+    "dev": "node init && pnpm build:css && build-figma-plugin --typecheck && concurrently pnpm:dev:css pnpm:dev:js",
+    "dev:css": "node init && tailwind -i ./src/styles/global.css -o ./build/global.css --watch",
+    "dev:js": "node init && onchange 'build/global.css' 'src/**/*' '../../packages/ui/**/*' -- build-figma-plugin --typecheck"
   },
   "dependencies": {
     "@campsite/config": "workspace:*",
