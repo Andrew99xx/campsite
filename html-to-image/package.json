@@ -5,7 +5,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "node init && nodemon server.js",
     "lint": "eslint src/*.js",
     "server": "node server.js"
   },
