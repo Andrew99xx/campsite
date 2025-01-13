@@ -4,11 +4,11 @@
   "private": true,
   "main": "package.json",
   "scripts": {
-    "build": "sanity build",
+    "build": "node init && sanity build",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",
-    "dev": "sanity dev",
-    "start": "sanity start"
+    "dev": "node init && sanity dev",
+    "start": "node init && sanity start"
   },
   "dependencies": {
     "@sanity/vision": "catalog:",
