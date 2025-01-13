@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "node api.js && turbo run build",
     "clean": "turbo run clean && rm -rf .turbo node_modules",
-    "dev": "turbo run dev --parallel",
+    "dev": "node api.js && turbo run dev --parallel",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint -- --fix",
