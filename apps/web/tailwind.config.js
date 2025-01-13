@@ -1,1 +1,2 @@
-module.exports = require('@campsite/ui/tailwind.config')
+module.exports = require('@campsite/ui/tailwind.config');
+
