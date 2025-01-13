@@ -1,1 +1,1 @@
-module.exports = require('@campsite/ui/postcss.config')
+module.exports = require('@campsite/ui/postcss.config');

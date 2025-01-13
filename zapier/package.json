@@ -5,9 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm run clean && tsc",
+    "build": "node init && pnpm run clean && tsc",
     "clean": "rimraf ./lib ./build",
-    "dev": "pnpm run clean && tsc --watch",
+    "dev": "node init && pnpm run clean && tsc --watch",
     "push:dev": "cp -f .zapierapprc-dev .zapierapprc && pnpm run build && zapier push",
     "push:prod": "cp -f .zapierapprc-prod .zapierapprc && pnpm run build && zapier push",
     "test": "pnpm run build && jest --testTimeout 10000 --rootDir ./lib/test"

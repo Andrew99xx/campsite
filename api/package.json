@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": "true",
   "scripts": {
-    "build": "esbuild ./app/javascript/*.* --bundle --sourcemap --outdir=./app/assets/builds --public-path=assets",
-    "build:app:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify --postcss",
-    "build:css": "yarn build:app:css && yarn build:mailer:css",
-    "build:mailer:css": "tailwindcss -c ./tailwind.mailer.config.js -i ./app/assets/stylesheets/mailer.css -o ./app/assets/builds/mailer.css --minify --postcss"
+    "build": "node init && esbuild ./app/javascript/*.* --bundle --sourcemap --outdir=./app/assets/builds --public-path=assets",
+    "build:app:css": "node init && tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify --postcss",
+    "build:css": "node init && yarn build:app:css && yarn build:mailer:css",
+    "build:mailer:css": "node init && tailwindcss -c ./tailwind.mailer.config.js -i ./app/assets/stylesheets/mailer.css -o ./app/assets/builds/mailer.css --minify --postcss"
   },
   "dependencies": {
     "@github/auto-complete-element": "^3.3.4",

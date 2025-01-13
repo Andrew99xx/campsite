@@ -4,7 +4,7 @@
   "private": true,
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "clean": "rm -rf .turbo dist node_modules"
   },
   "devDependencies": {
